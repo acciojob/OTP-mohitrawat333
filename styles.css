@@ -1,1 +1,73 @@
 /*  your css code here. If applicable */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 0;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 200px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Verification</h1>
+        <p>Please enter the OTP sent to your mobile number.</p>
+        <form id="otpForm">
+            <input type="text" id="otpInput" placeholder="Enter OTP" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("otpForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const otpInput = document.getElementById("otpInput").value;
+            // Here you can perform the logic to verify the OTP entered by the user
+            // For now, let's just log the entered OTP
+            console.log("Entered OTP:", otpInput);
+            // You can add further logic to handle verification
+        });
+    </script>
+</body>
+</html>
